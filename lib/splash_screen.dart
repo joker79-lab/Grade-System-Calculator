@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.blue.shade700,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -52,6 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(height: 20),
             const Text(
               'Student Grade Calculator',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 28,
@@ -60,15 +61,21 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 12),
             const Text(
-              'Calculate your grades easily.',
+              'Calculate Your Grades Easily',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 18,
               ),
             ),
             const SizedBox(height: 30),
-            const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            const SizedBox(
+              width: 32,
+              height: 32,
+              child: CircularProgressIndicator(
+                strokeWidth: 3,
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              ),
             ),
           ],
         ),

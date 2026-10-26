@@ -8,7 +8,7 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Student Grade Calculator'), findsAtLeastNWidgets(1));
-    expect(find.text('Calculate your grades easily.'), findsOneWidget);
+    expect(find.text('Calculate Your Grades Easily'), findsOneWidget);
   });
 
   testWidgets('Calculator screen displays required fields after splash', (tester) async {
