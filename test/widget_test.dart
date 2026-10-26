@@ -4,10 +4,17 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:grade_system_calculator/main.dart';
 
 void main() {
-  testWidgets('Student grade calculator displays required fields', (tester) async {
+  testWidgets('Splash screen shows the app branding', (tester) async {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Student Grade Calculator'), findsAtLeastNWidgets(1));
+    expect(find.text('Calculate your grades easily.'), findsOneWidget);
+  });
+
+  testWidgets('Calculator screen displays required fields after splash', (tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle(const Duration(seconds: 3));
+
     expect(find.text('Student Name'), findsOneWidget);
     expect(find.text('Mathematics'), findsOneWidget);
     expect(find.text('English'), findsOneWidget);

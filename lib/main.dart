@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'splash_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: const GradeCalculatorScreen(),
+      home: const SplashScreen(nextScreen: GradeCalculatorScreen()),
     );
   }
 }
